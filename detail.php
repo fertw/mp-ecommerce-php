@@ -58,7 +58,7 @@ $item->quantity = $_POST['unit'];
 $item->unit_price = $_POST['price'];
 $preference->items = array($item);
 $preference->notification_url = 'https://fertw-mp-commerce-php.herokuapp.com/notification.php';
-$preference->external_reference = "carmine_fernando@hotmail.com";
+$preference->external_reference = "carmine.fernando@gmail.com";
 
 $preference->payment_methods = array(
 "excluded_payment_methods" => array(array("id" => "amex")),

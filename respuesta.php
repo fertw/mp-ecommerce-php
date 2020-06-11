@@ -16,7 +16,7 @@ if(isset($_GET['collection_status'])){
     $payment_type = $_GET['payment_type'];
     $total = $respuesta['transaction_details']['total_paid_amount'];
 
-    $mensaje = "Su operacion fue aprobado.
+    $mensaje = "Su operacion fue aprobada.
       <br /><br />
       1) payment_method_id: ".$payment_method_id."<br />
       2) payment_type: ".$payment_type."<br />
@@ -102,26 +102,7 @@ if(isset($_GET['collection_status'])){
             </div>
             <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
 
-                <style>
-                    .approved{
-                        padding: 30px;
-                        margin: 30px;
-                        background-color: #0d0;
-                        color: white;
-                    }
-                    .pending, .in_process{
-                        padding: 30px;
-                        margin: 30px;
-                        background-color: #c92;
-                        color: white;
-                    }
-                    .failure{
-                        padding: 30px;
-                        margin: 30px;
-                        background-color: #d00;
-                        color: white;
-                    }
-                </style>
+
                 <div class="<?=$_GET['collection_status'];?>"><?php echo $mensaje;?></div>
 
             </div>
