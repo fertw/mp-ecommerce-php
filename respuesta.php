@@ -1,4 +1,5 @@
 <?php
+ //PANTALLA MENSAJE RECHAZO
 if(isset($_GET['collection_status'])){
   $mensaje = "";
   if($_GET['collection_status'] == 'approved'){
@@ -18,15 +19,17 @@ if(isset($_GET['collection_status'])){
 
     $mensaje = "Su operacion fue aprobada.
       <br /><br />
-      1) payment_method_id: ".$payment_method_id."<br />
-      2) payment_type: ".$payment_type."<br />
-      3) collection_id: ".$collection_id."<br />
-      4) Total de la compra: $ ".$total;
+      payment_method_id: ".$payment_method_id."<br />
+      payment_type: ".$payment_type."<br />
+      collection_id: ".$collection_id."<br />
+      Total de la compra: $ ".$total;
 
   }
+  //PANTALLA MENSAJE RECHAZO
   if($_GET['collection_status'] == 'failure'){
     $mensaje = "Su pago fue rechazado.";
   }
+  //PANTALLA MENSAJE PENDIENTE
   if(($_GET['collection_status'] == 'pending') || ($_GET['collection_status'] == 'in_process')){
     $mensaje = "Su pago está pendiente.";
   }
